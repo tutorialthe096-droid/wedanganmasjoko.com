@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedangan Mas Joko | Tempat Hangat Penuh Cerita</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Konfigurasi Tailwind untuk Font Inter dan tema warna hangat -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'joko-primary': '#6D3200', // Cokelat tua/kayu
+                        'joko-secondary': '#A55D35', // Cokelat muda
+                        'joko-background': '#FFFBEB', // Krem lembut
+                        'joko-accent': '#C0392B', // Merah bata/hangat
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Styling tambahan untuk suasana tradisional */
+        .header-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://placehold.co/1200x400/3e2723/ffffff?text=Suasana+Wedangan');
+            background-size: cover;
+            background-position: center;
+        }
+        .menu-card {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease;
+        }
+        .menu-card:hover {
+            transform: translateY(-4px);
+        }
+        /* Icon Sate/Ate-ate */
+        .sate-icon {
+            filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.25));
+        }
+    </style>
+</head>
+<body class="bg-joko-background font-sans text-joko-primary">
+
+    <!-- Header / Jumbotron -->
+    <header class="header-bg text-white py-16 md:py-24 rounded-b-xl">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-xl font-serif mb-2 tracking-widest text-joko-secondary">SEJAK 20XX</p>
+            <h1 class="text-6xl md:text-8xl font-bold mb-4 font-serif drop-shadow-lg" style="text-shadow: 2px 2px #000;">Wedangan Mas Joko</h1>
+            <p class="text-2xl italic">"Tempat Hangat, Penuh Cerita."</p>
+            <!-- Tombol Pesan/Lihat Lokasi (Ganti dengan link Maps asli) -->
+            <a href="https://maps.app.goo.gl/AdU9e4oD3pytQvAk6" target="_blank" class="mt-8 inline-block bg-joko-accent text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-red-700 transition duration-300">
+                Lihat Lokasi Kami
+            </a>
+        </div>
+    </header>
+
+    <!-- Tentang Kami (Brief Introduction) -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-4xl font-serif font-bold mb-4 text-joko-primary">Tentang Wedangan Kami</h2>
+            <p class="text-lg text-gray-700">
+                Wedangan Mas Joko adalah warung tradisional yang menyajikan suasana Solo yang otentik.
+                Kami menyajikan berbagai macam *sego kucing* (nasi kucing), sate, gorengan, dan aneka minuman jahe hangat untuk menemani malam Anda.
+                Sempurna untuk berkumpul bersama teman atau menikmati waktu santai.
+            </p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="bg-white py-16 rounded-t-xl">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-4xl font-serif font-bold mb-12 text-joko-primary">Daftar Menu Favorit</h2>
+
+            <!-- Menu Grid Container -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- 1. Menu Nasi (Sego Kucing) -->
+                <div class="menu-card bg-joko-background p-6 rounded-xl border-t-4 border-joko-accent shadow-lg">
+                    <h3 class="text-3xl font-serif font-bold mb-4 text-joko-accent flex items-center">
+                        <span class="mr-2 text-4xl">🍚</span> Nasi Kucing
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between border-b border-dashed pb-2">
+                            <span class="font-semibold">Nasi Kucing Sambel Teri</span>
+                            <span class="text-joko-primary font-bold">IDR 5.000</span>
+                        </li>
+                        <li class="flex justify-between border-b border-dashed pb-2">
+                            <span class="font-semibold">Nasi Kucing Oseng Tempe</span>
+                            <span class="text-joko-primary font-bold">IDR 5.000</span>
+                        </li>
+                        <li class="flex justify-between border-b border-dashed pb-2">
+                            <span class="font-semibold">Nasi Kucing Ayam Suwir Pedas</span>
+                            <span class="text-joko-primary font-bold">IDR 6.000</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 2. Menu Sate & Lauk (Ate-ate) -->
+                <div class="menu-card bg-joko-background p-6 rounded-xl border-t-4 border-joko-accent shadow-lg">
+                    <h3 class="text-3xl font-serif font-bold mb-4 text-joko-accent flex items-center">
+                        <span class="mr-2 text-4xl sate-icon">🍡</span> Sate & Lauk Pilihan
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between border-b border-dashed pb-2">
+                            <span class="font-semibold">Sate Telur Puyuh (Bacem)</span>
+                            <span class="text-joko-primary font-bold">IDR 3.000</span>
+                        </li>
+                        <li class="flex justify-between border-b border-dashed pb-2">
+                            <span class="font-semibold">Sate Usus Ayam (Bumbu Kuning)</span>
+                            <span class="text-joko-primary font-bold">IDR 3.000</span>
+                        </li>
+                        <li class="flex justify-between border-b border-dashed pb-2">
+                            <span class="font-semibold">Tempe/Tahu Bacem</span>
+                            <span class="text-joko-primary font-bold">IDR 2.000</span>
+                        </li>
+                        <li class="flex justify-between border-b border-dashed pb-2">
+                            <span class="font-semibold">Sate Keong</span>
+                            <span class="text-joko-primary font-bold">IDR 4.000</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 3. Menu Minuman -->
+                <div class="menu-card bg-joko-background p-6 rounded-xl border-t-4 border-joko-accent shadow-lg">
+                    <h3 class="text-3xl font-serif font-bold mb-4 text-joko-accent flex items-center">
+                        <span class="mr-2 text-4xl">☕</span> Minuman Hangat & Segar
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between border-b border-dashed pb-2">
+                            <span class="font-semibold">Wedang Jahe Panas</span>
+                            <span class="text-joko-primary font-bold">IDR 7.000</span>
+                        </li>
+                        <li class="flex justify-between border-b border-dashed pb-2">
+                            <span class="font-semibold">Es Teh Jumbo / Panas</span>
+                            <span class="text-joko-primary font-bold">IDR 4.000</span>
+                        </li>
+                        <li class="flex justify-between border-b border-dashed pb-2">
+                            <span class="font-semibold">Kopi Joss Arang</span>
+                            <span class="text-joko-primary font-bold">IDR 8.000</span>
+                        </li>
+                        <li class="flex justify-between border-b border-dashed pb-2">
+                            <span class="font-semibold">Jeruk Nipis Hangat/Dingin</span>
+                            <span class="text-joko-primary font-bold">IDR 6.000</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <p class="text-center text-gray-500 mt-10 italic">
+                *Harga sewaktu-waktu dapat berubah. Semua menu dimasak dengan resep turun-temurun.
+            </p>
+        </div>
+    </section>
+
+    <!-- Informasi Lokasi & Kontak -->
+    <section id="contact" class="py-16 bg-joko-secondary text-white">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- Peta Sederhana (Embed Map Gagal, Gunakan link) -->
+            <div class="rounded-xl overflow-hidden shadow-2xl">
+                <h3 class="text-2xl font-serif font-bold mb-4">Temukan Kami</h3>
+                <div class="h-64 bg-gray-800 flex items-center justify-center">
+                    <a href="https://maps.app.goo.gl/AdU9e4oD3pytQvAk6" target="_blank" class="text-center p-4 bg-joko-accent hover:bg-red-700 transition duration-300 rounded-lg text-lg font-bold">
+                        Buka di Google Maps
+                        <!-- Icon link eksternal -->
+                        <svg class="inline-block ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kontak dan Jam Operasi -->
+            <div>
+                <h3 class="text-2xl font-serif font-bold mb-4">Informasi Kontak</h3>
+                <p class="mb-4">
+                    <span class="font-bold">Alamat:</span> Lokasi Wedangan Mas Joko, dekat area Solo (Mohon Ganti Sesuai Alamat Asli)
+                </p>
+                <p class="mb-4">
+                    <span class="font-bold">Telepon:</span> +62 8XX XXXX XXXX (Ganti Nomor Asli)
+                </p>
+                <h3 class="text-2xl font-serif font-bold mb-4 mt-8">Jam Operasi</h3>
+                <ul class="space-y-2">
+                    <li><span class="font-bold">Senin - Minggu:</span> 17.00 WIB - 02.00 WIB</li>
+                    <li><span class="font-bold text-joko-accent">Hari Libur:</span> Buka seperti biasa</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-joko-primary text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Wedangan Mas Joko. Semua Hak Cipta Dilindungi.</p>
+            <p class="text-sm mt-1 text-gray-400">Dibuat dengan semangat hangat Wedangan.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript sederhana untuk navigasi (tidak perlu untuk single page) -->
+    <script>
+        // Placeholder untuk fungsionalitas JavaScript jika diperlukan di masa depan
+        console.log("Website Wedangan Mas Joko siap!");
+    </script>
+
+</body>
+</html>
